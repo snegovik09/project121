@@ -1,5 +1,27 @@
 'use strict'
 
+let $start = document.getElementById('start'),
+    $budgetValue = document.getElementsByClassName('budget-value'),
+    $daybudgetValue = document.getElementsByClassName('daybudget-value'),
+    $levelValue = document.getElementsByClassName('level-value'),
+    $expensesValue = document.getElementsByClassName('expenses-value'),
+    $optionalexpensesValue = document.getElementsByClassName('optionalexpenses-value'),
+    $incomeValue = document.getElementsByClassName('income-value'),
+    $monthsavingsValue = document.getElementsByClassName('monthsavings-value'),
+    $yearsavingsValue = document.getElementsByClassName('yearsavings-value'),
+    $expensesItem = document.querySelectorAll('.expenses-item'),
+    $btnExpensesItem = document.querySelector('.expenses-item-btn'),
+    $btnOptionalExpenses = document.querySelector('.optionalexpenses-btn'),
+    $btnCountBudget = document.querySelector('.count-budget-btn'),
+    $optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+    $chooseIncome = document.querySelector('.choose-income'),
+    $savings = document.querySelector('#savings'),
+    $sum = document.querySelector('#sum'),
+    $percent = document.querySelector('#percent'),
+    $yearValue = document.querySelector('.year-value'),
+    $monthValue = document.querySelector('.month-value'),
+    $dayValue = document.querySelector('.day-value');
+
 let money, time;
 
 function start() {
@@ -88,10 +110,8 @@ let appData = {
 function prog () {
     let a = '';
     for (let key in appData) {
-        a = a + "Наша программа включает в себя данные: " + key + "\n"
+        a = a + "Наша программа включает в себя данные: " + key + " - " + appData[key] + "\n"
     }
     a = a.substring(0, a.length - 1);
     alert(a);
-}     
-
-prog ();
+}
